@@ -40,3 +40,44 @@
 .read-the-docs {
   color: #888;
 }
+
+.App {
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  text-align: left;
+  flex: 1;
+}
+
+.topImage {
+  border-radius: 8px;
+  height: 200px;
+  margin-right: 8px;
+  max-width: 200px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.list-elem {
+  text-transform: capitalize;
+}
+
+.list-elem > span:hover{
+  cursor: pointer;
+  border-bottom: 1px solid;
+}
+
+.title1 {
+  text-transform: capitalize;
+}
