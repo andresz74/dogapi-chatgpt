@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { API_URL } from './configuration';
+import { DOG_API_URL } from './configuration';
 
 interface ComponentProps {
     dogBreed: string;
@@ -19,7 +19,7 @@ export const DogImage: React.FC<ComponentProps> = ({
     const [dogImgs, setDogImgs] = React.useState<string[]>([]);
     const getDogImages = async () => {
         try {
-            const response = await fetch(`${API_URL}/breed/${dogBreed}/images`);
+            const response = await fetch(`${DOG_API_URL}/breed/${dogBreed}/images`);
             if (!response.ok) {
                 throw new Error(
                     `Failed to fetch image. Status: ${response.status}`,

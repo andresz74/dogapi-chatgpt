@@ -1,7 +1,7 @@
 import React from 'react';
 import { ChatCompletionRequestMessageRoleEnum } from 'openai';
 import ReactMarkdown from 'react-markdown';
-import { API_URL } from './configuration';
+import { CHATGPT_API_URL } from './configuration';
 
 export interface ComponentProps {
     dogBreed: string;
@@ -39,7 +39,7 @@ export const ChatGpt: React.FC<ComponentProps> = ({
 
     const getOpenAIResponse = async () => {
         try {
-            const response = await fetch(`${API_URL}/openai-chat`, {
+            const response = await fetch(`${CHATGPT_API_URL}/api/openai-chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
